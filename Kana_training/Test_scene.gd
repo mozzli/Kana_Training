@@ -4,6 +4,7 @@ var correct_letter
 var letter
 var options
 
+
 func rolling_letter():
 	options = ["1","2"]
 	letters.clear()
@@ -28,11 +29,18 @@ func _ready():
 	rolling_letter()
 	button_setting()
 
+
 func button_pressing(button_number):
 	if get_node("Button" + String(button_number)).text == correct_letter:
-		print("correct")
+		var tick = preload("res://tick.tscn")
+		var ticker = tick.instance()
+		add_child(ticker)
+		ticker.position = Vector2(360, 760)
 	else:
-		print("false")
+		var cross_preload = preload("res://cross.tscn")
+		var cross_instance = cross_preload.instance()
+		add_child(cross_instance)
+		cross_instance.position = Vector2(360, 760)
 	get_node("Hiragana_signs/"+correct_letter).visible = false
 	rolling_letter()
 	button_setting()
