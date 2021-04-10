@@ -24,6 +24,8 @@ func button_setting():
 		options.erase(button_number)
 
 func _ready():
+	var transition_out = load("res://Shader3.tscn")
+	add_child(transition_out.instance())
 	for i in Mode.mode:
 		letters.append(i)
 	rolling_letter()
@@ -50,3 +52,6 @@ func _on_Button1_pressed():
 
 func _on_Button2_pressed():
 	button_pressing(2)
+
+func _on_quit_pressed():
+	get_tree().change_scene("res://Main.tscn")

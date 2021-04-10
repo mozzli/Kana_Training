@@ -155,10 +155,25 @@ func _on_Button_en_pressed():
 		for letter in Button_en_letters:
 			mode_full.erase(letter)
 
-#accept button function
+# accept button function
 func _on_Accept_button_pressed():
-#	preparing Autoload for test scene
+#	preparing Autoload script for test scene
 	Mode.mode = mode_full
-	print(Mode.mode)
-#	loading test scene
+	var transition_in = load("res://Shader2.tscn")
+	add_child(transition_in.instance())
+	$Timer.start()
+	
+
+# accept button - dynamic state
+func _process(_delta):
+	if mode_full.size() <= 2:
+		$Accept_button.disabled = true
+	else:
+		$Accept_button.disabled = false
+
+func _ready():
+	mode_full = []
+
+func _on_Timer_timeout():
+	$Timer.stop()
 	get_tree().change_scene("res://Test_scene.tscn")

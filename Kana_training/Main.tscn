@@ -1,14 +1,12 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://fonts/rockford_sans/RockfordSans-Light.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://Images/accept.png" type="Texture" id=3]
 
-[sub_resource type="StyleBoxTexture" id=1]
+[sub_resource type="Theme" id=1]
 
-[sub_resource type="DynamicFont" id=2]
-size = 90
-outline_color = Color( 0.0392157, 0.709804, 0.0352941, 1 )
-font_data = ExtResource( 1 )
+[sub_resource type="StyleBoxTexture" id=2]
 
 [sub_resource type="DynamicFont" id=3]
 size = 90
@@ -62,6 +60,11 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=13]
 size = 90
+outline_color = Color( 0.0392157, 0.709804, 0.0352941, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 90
 outline_color = Color( 0.239216, 0.0627451, 0.0627451, 1 )
 font_data = ExtResource( 1 )
 
@@ -73,8 +76,9 @@ margin_left = 60.0
 margin_top = 226.027
 margin_right = 210.0
 margin_bottom = 376.027
-custom_styles/pressed = SubResource( 1 )
-custom_fonts/font = SubResource( 2 )
+theme = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "a"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -85,7 +89,7 @@ margin_left = 290.0
 margin_top = 226.027
 margin_right = 440.0
 margin_bottom = 376.027
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "k-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -96,7 +100,7 @@ margin_left = 520.0
 margin_top = 226.027
 margin_right = 670.0
 margin_bottom = 376.027
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "s-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -107,7 +111,7 @@ margin_left = 60.0
 margin_top = 446.027
 margin_right = 210.0
 margin_bottom = 596.027
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "t-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -118,7 +122,7 @@ margin_left = 290.0
 margin_top = 446.027
 margin_right = 440.0
 margin_bottom = 596.027
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "n-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -129,7 +133,7 @@ margin_left = 520.0
 margin_top = 446.027
 margin_right = 670.0
 margin_bottom = 596.027
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "h-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -137,10 +141,10 @@ __meta__ = {
 
 [node name="Button_m" type="Button" parent="."]
 margin_left = 60.0
-margin_top = 666.027
-margin_right = 210.0
-margin_bottom = 816.027
-custom_fonts/font = SubResource( 8 )
+margin_top = 660.0
+margin_right = 212.119
+margin_bottom = 816.0
+custom_fonts/font = SubResource( 9 )
 text = "m-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -151,7 +155,7 @@ margin_left = 290.0
 margin_top = 666.027
 margin_right = 440.0
 margin_bottom = 816.027
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 text = "y-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -162,7 +166,7 @@ margin_left = 520.0
 margin_top = 666.027
 margin_right = 670.0
 margin_bottom = 816.027
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 text = "r-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -173,7 +177,7 @@ margin_left = 160.0
 margin_top = 886.027
 margin_right = 310.0
 margin_bottom = 1036.03
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
 text = "w-"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -184,19 +188,19 @@ margin_left = 390.0
 margin_top = 886.027
 margin_right = 540.0
 margin_bottom = 1036.03
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 text = "n"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Accept_button" type="Button" parent="."]
-margin_left = 142.811
-margin_top = 1108.29
-margin_right = 550.811
-margin_bottom = 1244.29
-custom_fonts/font = SubResource( 13 )
-text = "accept"
+margin_left = 270.611
+margin_top = 1095.29
+margin_right = 429.611
+margin_bottom = 1227.29
+custom_fonts/font = SubResource( 14 )
+icon = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -212,8 +216,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.580392, 0.74902, 0.745098, 1 )
 __meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.7
 [connection signal="pressed" from="Button_a" to="." method="_on_Button_a_pressed"]
 [connection signal="pressed" from="Button_k" to="." method="_on_Button_k_pressed"]
 [connection signal="pressed" from="Button_s" to="." method="_on_Button_s_pressed"]
@@ -226,3 +235,4 @@ __meta__ = {
 [connection signal="pressed" from="Button_w" to="." method="_on_Button_w_pressed"]
 [connection signal="pressed" from="Button_en" to="." method="_on_Button_en_pressed"]
 [connection signal="pressed" from="Accept_button" to="." method="_on_Accept_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
