@@ -1,6 +1,7 @@
 extends Node2D
 
 # Checked modes variants setup
+
 var mode_a = false
 var mode_k = false
 var mode_s = false
@@ -13,10 +14,12 @@ var mode_r = false
 var mode_w = false
 var mode_en = false
 
-#Full "Checked modes" array setup
+# Full "Checked modes" array setup
+
 var mode_full = []
 
-#Mode buttons functions
+# Mode buttons functions
+
 func _on_Button_a_pressed():
 #	mode letters setup
 	var Button_a_letters = ["a","i","u","e","o"]
@@ -156,24 +159,36 @@ func _on_Button_en_pressed():
 			mode_full.erase(letter)
 
 # accept button function
+
 func _on_Accept_button_pressed():
-#	preparing Autoload script for test scene
-	Mode.mode = mode_full
 	var transition_in = load("res://Shader2.tscn")
 	add_child(transition_in.instance())
 	$Timer.start()
+#	preparing Autoload Mode script for test scene
+	Mode.mode = mode_full
+#	loading test scene
+
+func _on_Timer_timeout():
+	$Timer.stop()
+	assert(get_tree().change_scene("res://Test_scene.tscn") == OK)
 	
 
-# accept button - dynamic state
+
+func _on_quit_pressed():
+	assert(get_tree().change_scene("res://Kana_mode.tscn") == OK)
+
+
+func _on_Maru_pressed():
+	Mode.maru = not Mode.maru
+	Mode.ten_ten = not Mode.ten_ten
+	if Mode.maru == true:
+		$Maru.get("custom_fonts/font").outline_size = 10
+	else:
+		$Maru.get("custom_fonts/font").outline_size = 0
+
 func _process(_delta):
 	if mode_full.size() <= 2:
 		$Accept_button.disabled = true
 	else:
 		$Accept_button.disabled = false
-
-func _ready():
-	mode_full = []
-
-func _on_Timer_timeout():
-	$Timer.stop()
-	get_tree().change_scene("res://Test_scene.tscn")
+	

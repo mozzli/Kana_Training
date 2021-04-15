@@ -10,7 +10,7 @@ shader_param/cutoff = 0.0
 shader_param/smooth_size = 0.442
 shader_param/mask = ExtResource( 2 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Fade_out"
 length = 1.7
 tracks/0/type = "value"
@@ -26,8 +26,7 @@ tracks/0/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Nowa animacja"
+[sub_resource type="Animation" id=3]
 length = 1.7
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material:shader_param/cutoff")
@@ -55,8 +54,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
-anims/Fade_out = SubResource( 3 )
-"anims/Nowa animacja" = SubResource( 2 )
+anims/Fade_out = SubResource( 2 )
+"anims/Nowa animacja" = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 wait_time = 1.7

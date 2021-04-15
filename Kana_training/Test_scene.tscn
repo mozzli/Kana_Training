@@ -1,74 +1,30 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://letters/u.png" type="Texture" id=1]
-[ext_resource path="res://letters/a.png" type="Texture" id=2]
-[ext_resource path="res://letters/e.png" type="Texture" id=3]
-[ext_resource path="res://letters/i.png" type="Texture" id=4]
-[ext_resource path="res://letters/o.png" type="Texture" id=5]
+[ext_resource path="res://fonts/mananzo/HanaMinA.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/rockford_sans/RockfordSans-Light.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://Test_scene.gd" type="Script" id=7]
 [ext_resource path="res://Button.gd" type="Script" id=8]
-[ext_resource path="res://letters/ki.png" type="Texture" id=9]
-[ext_resource path="res://letters/ko.png" type="Texture" id=10]
-[ext_resource path="res://letters/ka.png" type="Texture" id=11]
-[ext_resource path="res://letters/ku.png" type="Texture" id=12]
-[ext_resource path="res://letters/ke.png" type="Texture" id=13]
-[ext_resource path="res://letters/no.png" type="Texture" id=14]
-[ext_resource path="res://letters/su.png" type="Texture" id=15]
-[ext_resource path="res://letters/ro.png" type="Texture" id=16]
-[ext_resource path="res://letters/tsu.png" type="Texture" id=17]
-[ext_resource path="res://letters/mu.png" type="Texture" id=18]
-[ext_resource path="res://letters/ta.png" type="Texture" id=19]
-[ext_resource path="res://letters/so.png" type="Texture" id=20]
-[ext_resource path="res://letters/fu.png" type="Texture" id=21]
-[ext_resource path="res://letters/te.png" type="Texture" id=22]
-[ext_resource path="res://letters/ra.png" type="Texture" id=23]
-[ext_resource path="res://letters/na.png" type="Texture" id=24]
-[ext_resource path="res://letters/nu.png" type="Texture" id=25]
-[ext_resource path="res://letters/sa.png" type="Texture" id=26]
-[ext_resource path="res://letters/wo.png" type="Texture" id=27]
-[ext_resource path="res://letters/ma.png" type="Texture" id=28]
-[ext_resource path="res://letters/ne.png" type="Texture" id=29]
-[ext_resource path="res://letters/chi.png" type="Texture" id=30]
-[ext_resource path="res://letters/ha.png" type="Texture" id=31]
-[ext_resource path="res://letters/to.png" type="Texture" id=32]
-[ext_resource path="res://letters/shi.png" type="Texture" id=33]
-[ext_resource path="res://letters/ni.png" type="Texture" id=34]
-[ext_resource path="res://letters/he.png" type="Texture" id=35]
-[ext_resource path="res://letters/se.png" type="Texture" id=36]
-[ext_resource path="res://letters/ho.png" type="Texture" id=37]
-[ext_resource path="res://letters/hi.png" type="Texture" id=38]
-[ext_resource path="res://letters/mi.png" type="Texture" id=39]
-[ext_resource path="res://letters/mo.png" type="Texture" id=40]
-[ext_resource path="res://letters/me.png" type="Texture" id=41]
-[ext_resource path="res://letters/ya.png" type="Texture" id=42]
-[ext_resource path="res://letters/yu.png" type="Texture" id=43]
-[ext_resource path="res://letters/yo.png" type="Texture" id=44]
-[ext_resource path="res://letters/ri.png" type="Texture" id=45]
-[ext_resource path="res://letters/re.png" type="Texture" id=46]
-[ext_resource path="res://letters/wa.png" type="Texture" id=47]
-[ext_resource path="res://letters/ru.png" type="Texture" id=48]
-[ext_resource path="res://letters/n.png" type="Texture" id=49]
-[ext_resource path="res://Images/accept.png" type="Texture" id=50]
-[ext_resource path="res://Images/back_arrow.png" type="Texture" id=51]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
 font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.309804, 0.486275, 0.478431, 1 )
+bg_color = Color( 0.309804, 0.486275, 0.478431, 0 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.309804, 0.486275, 0.478431, 1 )
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.309804, 0.486275, 0.478431, 1 )
+bg_color = Color( 0.309804, 0.486275, 0.478431, 0 )
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.309804, 0.486275, 0.478431, 0 )
+
+[sub_resource type="Theme" id=7]
 BoxContainer/constants/separation = 4
 Button/colors/font_color = Color( 0.054902, 0.0196078, 0.0196078, 1 )
 Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
@@ -77,10 +33,10 @@ Button/colors/font_color_pressed = Color( 0, 0, 0, 1 )
 Button/colors/icon_color_hover = Color( 0, 0, 0, 1 )
 Button/colors/icon_color_pressed = Color( 0, 0, 0, 1 )
 Button/styles/disabled = SubResource( 2 )
-Button/styles/focus = null
-Button/styles/hover = SubResource( 3 )
-Button/styles/normal = SubResource( 4 )
-Button/styles/pressed = SubResource( 5 )
+Button/styles/focus = SubResource( 3 )
+Button/styles/hover = SubResource( 4 )
+Button/styles/normal = SubResource( 5 )
+Button/styles/pressed = SubResource( 6 )
 CheckBox/colors/font_color = Color( 0, 0, 0, 1 )
 CheckBox/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 CheckBox/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -1131,6 +1087,18 @@ WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
 
+[sub_resource type="StreamTexture" id=8]
+flags = 4
+load_path = "res://.import/back_arrow.png-9b8e97dd88319e137c6a294152e6ef19.stex"
+
+[sub_resource type="DynamicFont" id=9]
+size = 700
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=10]
+default_font = SubResource( 9 )
+
 [node name="Test_scene" type="Node2D"]
 script = ExtResource( 7 )
 __meta__ = {
@@ -1159,283 +1127,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hiragana_signs" type="Sprite" parent="."]
-
-[node name="a" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350.005, 350.221 )
-scale = Vector2( 0.498303, 0.502949 )
-texture = ExtResource( 2 )
-
-[node name="e" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 3 )
-
-[node name="i" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-texture = ExtResource( 4 )
-
-[node name="o" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
-
-[node name="u" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 1 )
-
-[node name="ka" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 11 )
-
-[node name="ki" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-texture = ExtResource( 9 )
-
-[node name="ku" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 12 )
-
-[node name="ke" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 13 )
-
-[node name="ko" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 10 )
-
-[node name="sa" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 26 )
-
-[node name="shi" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 33 )
-
-[node name="su" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 15 )
-
-[node name="se" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 36 )
-
-[node name="so" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 20 )
-
-[node name="ta" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 19 )
-
-[node name="chi" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 30 )
-
-[node name="tsu" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 17 )
-
-[node name="te" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 1.2, 1.2 )
-texture = ExtResource( 22 )
-
-[node name="to" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 1.2, 1.2 )
-texture = ExtResource( 32 )
-
-[node name="na" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 1.2, 1.2 )
-texture = ExtResource( 24 )
-
-[node name="ni" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 34 )
-
-[node name="nu" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 1.2, 1.2 )
-texture = ExtResource( 25 )
-
-[node name="ne" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 29 )
-
-[node name="no" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 14 )
-
-[node name="ha" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 31 )
-
-[node name="hi" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 1.2, 1.2 )
-texture = ExtResource( 38 )
-
-[node name="fu" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 21 )
-
-[node name="he" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 35 )
-
-[node name="ho" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 37 )
-
-[node name="ma" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 28 )
-
-[node name="mi" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 39 )
-
-[node name="mu" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-texture = ExtResource( 18 )
-
-[node name="me" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 41 )
-
-[node name="mo" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 40 )
-
-[node name="ya" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 42 )
-
-[node name="yu" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 43 )
-
-[node name="yo" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 44 )
-
-[node name="ra" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 23 )
-
-[node name="ri" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 45 )
-
-[node name="ru" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 48 )
-
-[node name="re" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 46 )
-
-[node name="ro" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 16 )
-
-[node name="wa" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 47 )
-
-[node name="wo" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 27 )
-
-[node name="n" type="Sprite" parent="Hiragana_signs"]
-visible = false
-position = Vector2( 350, 350 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 49 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
+layer = -2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchor_right = 1.0
@@ -1450,19 +1143,27 @@ __meta__ = {
 [node name="quit" type="Button" parent="."]
 margin_right = 133.0
 margin_bottom = 127.0
-theme = SubResource( 6 )
+theme = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 0.760784, 0.294118, 0.294118, 1 )
 custom_colors/font_color = Color( 0.545098, 0.0941176, 0.0941176, 1 )
 custom_colors/font_color_hover = Color( 0.454902, 0.0745098, 0.0745098, 1 )
-icon = ExtResource( 51 )
+icon = SubResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="quit"]
-visible = false
-position = Vector2( 66.5956, 66.5956 )
-texture = ExtResource( 50 )
+[node name="Label" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 73.0
+margin_right = 713.0
+margin_bottom = 971.0
+theme = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "と"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
